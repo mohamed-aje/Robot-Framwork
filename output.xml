@@ -1,76 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.1 on darwin)" generated="20230228 17:53:00.879" rpa="false" schemaversion="3">
-<suite id="s1" name="SeleniumTesting2" source="/Users/mohamedaje/Robotframework/SeleniumTesting2.robot">
-<test id="s1-t1" name="Register in website" line="14">
+<robot generator="Robot 6.0.2 (Python 3.9.1 on darwin)" generated="20230228 18:10:28.040" rpa="false" schemaversion="3">
+<suite id="s1" name="Portofolio" source="/Users/mohamedaje/Robotframework/portofolio.robot">
+<test id="s1-t1" name="testing my own portofolio" line="13">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://www.blazedemo.com/</arg>
+<arg>https://mohaaje.netlify.app/</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230228 17:53:01.197" level="INFO">Opening browser 'chrome' to base url 'http://www.blazedemo.com/'.</msg>
-<status status="PASS" starttime="20230228 17:53:01.196" endtime="20230228 17:53:04.901"/>
+<msg timestamp="20230228 18:10:28.428" level="INFO">Opening browser 'chrome' to base url 'https://mohaaje.netlify.app/'.</msg>
+<status status="PASS" starttime="20230228 18:10:28.427" endtime="20230228 18:10:32.847"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
-<arg>Welcome to the Simple Travel Agency!</arg>
+<arg>Hi, I'm Mohamed.</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20230228 17:53:04.922" level="INFO">Current page contains text 'Welcome to the Simple Travel Agency!'.</msg>
-<status status="PASS" starttime="20230228 17:53:04.903" endtime="20230228 17:53:04.923"/>
+<msg timestamp="20230228 18:10:32.916" level="INFO">Current page contains text 'Hi, I'm Mohamed.'.</msg>
+<status status="PASS" starttime="20230228 18:10:32.850" endtime="20230228 18:10:32.917"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath:/html/body/div[1]/div/div/a[3]</arg>
+<arg>xpath://*[@id="root"]/main/header/div/nav/a[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230228 17:53:04.925" level="INFO">Clicking element 'xpath:/html/body/div[1]/div/div/a[3]'.</msg>
-<status status="PASS" starttime="20230228 17:53:04.924" endtime="20230228 17:53:06.093"/>
+<msg timestamp="20230228 18:10:32.920" level="INFO">Clicking element 'xpath://*[@id="root"]/main/header/div/nav/a[2]'.</msg>
+<status status="PASS" starttime="20230228 18:10:32.918" endtime="20230228 18:10:33.107"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Projects I've Built and Participated in:</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230228 18:10:33.154" level="INFO">Current page contains text 'Projects I've Built and Participated in:'.</msg>
+<status status="PASS" starttime="20230228 18:10:33.108" endtime="20230228 18:10:33.154"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath://*[@id="app-navbar-collapse"]/ul[2]/li[2]/a</arg>
+<arg>xpath://*[@id="root"]/main/header/div/nav/a[3]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230228 17:53:06.095" level="INFO">Clicking element 'xpath://*[@id="app-navbar-collapse"]/ul[2]/li[2]/a'.</msg>
-<status status="PASS" starttime="20230228 17:53:06.094" endtime="20230228 17:53:06.513"/>
+<msg timestamp="20230228 18:10:33.156" level="INFO">Clicking element 'xpath://*[@id="root"]/main/header/div/nav/a[3]'.</msg>
+<status status="PASS" starttime="20230228 18:10:33.155" endtime="20230228 18:10:33.230"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="contact"]/div/div[2]/div</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230228 18:10:33.267" level="INFO">Current page contains element 'xpath://*[@id="contact"]/div/div[2]/div'.</msg>
+<status status="PASS" starttime="20230228 18:10:33.231" endtime="20230228 18:10:33.268"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://*[@id="name"]</arg>
 <arg>${name}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230228 17:53:06.515" level="INFO">Typing text 'Moha' into text field 'xpath://*[@id="name"]'.</msg>
-<status status="PASS" starttime="20230228 17:53:06.513" endtime="20230228 17:53:06.707"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://*[@id="company"]</arg>
-<arg>${company}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230228 17:53:06.708" level="INFO">Typing text 'Aje' into text field 'xpath://*[@id="company"]'.</msg>
-<status status="PASS" starttime="20230228 17:53:06.707" endtime="20230228 17:53:06.800"/>
+<msg timestamp="20230228 18:10:33.272" level="INFO">Typing text 'Mohamed' into text field 'xpath://*[@id="name"]'.</msg>
+<status status="PASS" starttime="20230228 18:10:33.269" endtime="20230228 18:10:33.658"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>xpath://*[@id="email"]</arg>
-<arg>${email_address}</arg>
+<arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230228 17:53:06.801" level="INFO">Typing text 'achoo.lmfao@yahoo' into text field 'xpath://*[@id="email"]'.</msg>
-<status status="PASS" starttime="20230228 17:53:06.800" endtime="20230228 17:53:06.952"/>
+<msg timestamp="20230228 18:10:33.660" level="INFO">Typing text 'mohammed@test.com' into text field 'xpath://*[@id="email"]'.</msg>
+<status status="PASS" starttime="20230228 18:10:33.659" endtime="20230228 18:10:33.807"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://*[@id="password"]</arg>
-<arg>${password}</arg>
+<arg>xpath://*[@id="message"]</arg>
+<arg>${message}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230228 17:53:06.954" level="INFO">Typing text '123456' into text field 'xpath://*[@id="password"]'.</msg>
-<status status="PASS" starttime="20230228 17:53:06.952" endtime="20230228 17:53:07.073"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>xpath://*[@id="password-confirm"]</arg>
-<arg>${confirm_password}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20230228 17:53:07.075" level="INFO">Typing text '123456' into text field 'xpath://*[@id="password-confirm"]'.</msg>
-<status status="PASS" starttime="20230228 17:53:07.074" endtime="20230228 17:53:07.166"/>
+<msg timestamp="20230228 18:10:33.809" level="INFO">Typing text 'Hello i found your portoflio interesting!!!' into text field 'xpath://*[@id="message"]'.</msg>
+<status status="PASS" starttime="20230228 18:10:33.808" endtime="20230228 18:10:33.986"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath://*[@id="app"]/div/div/div/div/div[2]/form/div[6]/div/button</arg>
+<arg>xpath://*[@id="contact"]/div/div[2]/div/div[2]/form/button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230228 17:53:07.168" level="INFO">Clicking button 'xpath://*[@id="app"]/div/div/div/div/div[2]/form/div[6]/div/button'.</msg>
-<status status="PASS" starttime="20230228 17:53:07.167" endtime="20230228 17:53:07.627"/>
+<msg timestamp="20230228 18:10:33.987" level="INFO">Clicking button 'xpath://*[@id="contact"]/div/div[2]/div/div[2]/form/button'.</msg>
+<status status="PASS" starttime="20230228 18:10:33.986" endtime="20230228 18:10:34.141"/>
 </kw>
-<status status="PASS" starttime="20230228 17:53:01.195" endtime="20230228 17:53:07.628"/>
+<status status="PASS" starttime="20230228 18:10:28.426" endtime="20230228 18:10:34.142"/>
 </test>
-<status status="PASS" starttime="20230228 17:53:00.885" endtime="20230228 17:53:07.630"/>
+<status status="PASS" starttime="20230228 18:10:28.046" endtime="20230228 18:10:34.143"/>
 </suite>
 <statistics>
 <total>
@@ -79,7 +77,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="SeleniumTesting2">SeleniumTesting2</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Portofolio">Portofolio</stat>
 </suite>
 </statistics>
 <errors>
