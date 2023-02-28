@@ -1,23 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.1 on darwin)" generated="20230223 18:08:32.516" rpa="false" schemaversion="3">
-<suite id="s1" name="Test" source="/Users/mohamedaje/Robotframework/test.robot">
-<test id="s1-t1" name="check var" line="14">
-<kw name="Set Variable" library="BuiltIn">
-<var>${three}</var>
-<arg>donald trump</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230223 18:08:32.584" level="INFO">${three} = donald trump</msg>
-<status status="PASS" starttime="20230223 18:08:32.583" endtime="20230223 18:08:32.586"/>
+<robot generator="Robot 6.0.2 (Python 3.9.1 on darwin)" generated="20230228 17:53:00.879" rpa="false" schemaversion="3">
+<suite id="s1" name="SeleniumTesting2" source="/Users/mohamedaje/Robotframework/SeleniumTesting2.robot">
+<test id="s1-t1" name="Register in website" line="14">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://www.blazedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230228 17:53:01.197" level="INFO">Opening browser 'chrome' to base url 'http://www.blazedemo.com/'.</msg>
+<status status="PASS" starttime="20230228 17:53:01.196" endtime="20230228 17:53:04.901"/>
 </kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${one} ${two}</arg>
-<arg>${three}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20230223 18:08:32.588" endtime="20230223 18:08:32.590"/>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome to the Simple Travel Agency!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230228 17:53:04.922" level="INFO">Current page contains text 'Welcome to the Simple Travel Agency!'.</msg>
+<status status="PASS" starttime="20230228 17:53:04.903" endtime="20230228 17:53:04.923"/>
 </kw>
-<status status="PASS" starttime="20230223 18:08:32.582" endtime="20230223 18:08:32.590"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div/div/a[3]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 17:53:04.925" level="INFO">Clicking element 'xpath:/html/body/div[1]/div/div/a[3]'.</msg>
+<status status="PASS" starttime="20230228 17:53:04.924" endtime="20230228 17:53:06.093"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="app-navbar-collapse"]/ul[2]/li[2]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 17:53:06.095" level="INFO">Clicking element 'xpath://*[@id="app-navbar-collapse"]/ul[2]/li[2]/a'.</msg>
+<status status="PASS" starttime="20230228 17:53:06.094" endtime="20230228 17:53:06.513"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="name"]</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 17:53:06.515" level="INFO">Typing text 'Moha' into text field 'xpath://*[@id="name"]'.</msg>
+<status status="PASS" starttime="20230228 17:53:06.513" endtime="20230228 17:53:06.707"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="company"]</arg>
+<arg>${company}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 17:53:06.708" level="INFO">Typing text 'Aje' into text field 'xpath://*[@id="company"]'.</msg>
+<status status="PASS" starttime="20230228 17:53:06.707" endtime="20230228 17:53:06.800"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="email"]</arg>
+<arg>${email_address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 17:53:06.801" level="INFO">Typing text 'achoo.lmfao@yahoo' into text field 'xpath://*[@id="email"]'.</msg>
+<status status="PASS" starttime="20230228 17:53:06.800" endtime="20230228 17:53:06.952"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 17:53:06.954" level="INFO">Typing text '123456' into text field 'xpath://*[@id="password"]'.</msg>
+<status status="PASS" starttime="20230228 17:53:06.952" endtime="20230228 17:53:07.073"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://*[@id="password-confirm"]</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 17:53:07.075" level="INFO">Typing text '123456' into text field 'xpath://*[@id="password-confirm"]'.</msg>
+<status status="PASS" starttime="20230228 17:53:07.074" endtime="20230228 17:53:07.166"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="app"]/div/div/div/div/div[2]/form/div[6]/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230228 17:53:07.168" level="INFO">Clicking button 'xpath://*[@id="app"]/div/div/div/div/div[2]/form/div[6]/div/button'.</msg>
+<status status="PASS" starttime="20230228 17:53:07.167" endtime="20230228 17:53:07.627"/>
+</kw>
+<status status="PASS" starttime="20230228 17:53:01.195" endtime="20230228 17:53:07.628"/>
 </test>
-<status status="PASS" starttime="20230223 18:08:32.520" endtime="20230223 18:08:32.593"/>
+<status status="PASS" starttime="20230228 17:53:00.885" endtime="20230228 17:53:07.630"/>
 </suite>
 <statistics>
 <total>
@@ -26,7 +79,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="SeleniumTesting2">SeleniumTesting2</stat>
 </suite>
 </statistics>
 <errors>
